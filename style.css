@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'satisfy';
+    src: url(/Satisfy/Satisfy-Regular.ttf);
+}
+@font-face {
+    font-family: 'bad_script';
+    src: url(/Bad_Script/BadScript-Regular.ttf);
+}
+
+body {
+    font-family: 'bad_script';
+    margin: 20px;
+}
+
+p {
+        font-size: 20px;
+}
+h1 {
+    color: #333;
+    text-align: center;
+    font-family: 'satisfy';
+}
+h2 {
+        font-family: 'satisfy';
+}
+
+h3 {
+        font-family: 'satisfy';
+        text-align: center;
+}
+h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div {
+    
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'bad_script';
+}
+
+form {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+        margin: 0 auto;
+            
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    max-width: 200px;
+    text-align: center;
+    border-color: aqua;
+    
+}
+ 
+
+button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+        font-family: 'satisfy';
+}
+
+
+#results {
+    margin-top: 20px;
+}

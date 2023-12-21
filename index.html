@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/brain.js"></script>
+
+</head>
+
+<body>
+    <h1>Brain.js library</h1>
+    <h2>Calculating Xor</h2>
+    <p>This is my project.I created a webpage using html,css and javascript and i used Brain.js library.In this project i used brain.js to create a neural network and I trained it with custom data. 
+        you should enter two binary numbers and this neural network will show you the Xor of those two inputs when you press submit button.
+    </p>
+    <form id="inputForm">
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" name="input1" required>
+
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" name="input2" required>
+
+        <button type="button" onclick="predict()">Submit</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        const net = new brain.NeuralNetwork();
+
+        
+        const trainingData = [
+            { input: [0, 0], output: [0] },
+            { input: [0, 1], output: [1] },
+            { input: [1, 0], output: [1] },
+            { input: [1, 1], output: [0] }
+        ];
+
+        
+        net.train(trainingData);
+
+        function predict() {
+            
+            const input1 = parseFloat(document.getElementById('input1').value);
+            const input2 = parseFloat(document.getElementById('input2').value);
+
+            
+            const output = Math.round(net.run([input1, input2])[0]);
+
+            
+            document.getElementById('results').innerHTML = `
+                <h4>Input: [${input1}, ${input2}], Output: ${output.toString(2)}</h4>
+            `;
+        }
+    </script>
+    <h3>Kiarash Rahmani 99463139</h3>
+</body id="div1">
+
+</html>
